@@ -6,10 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.File;
-
-import static com.sun.javafx.scene.control.skin.Utils.getResource;
-
 public class Main extends Application {
 
     @Override
@@ -18,9 +14,6 @@ public class Main extends Application {
         primaryStage.setTitle("Pretraga datoteka");
         Scene temp = new Scene(root, 450,400);
         primaryStage.setScene(temp);
-        temp.getStylesheets().clear();
-        File f = new File("izgled.css");
-        temp.getStylesheets().add("file:///" + f.getAbsolutePath().replace("\\", "/"));
         primaryStage.show();
         primaryStage.setResizable(false);
     }
