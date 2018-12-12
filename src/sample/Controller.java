@@ -47,20 +47,8 @@ public class Controller {
         if(nit.isAlive()) nit.interrupt();
     }
 
-    public void newWindow(ActionEvent actionEvent){
-        Parent root;
-        try {
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("forma.fxml"));
-            Stage stage = new Stage();
-            stage.setTitle("My New Stage Title");
-            stage.setScene(new Scene(root, 450, 450));
-            stage.show();
 
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 
 
 
