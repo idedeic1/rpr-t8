@@ -2,11 +2,19 @@ package sample;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
+import javafx.stage.Stage;
+
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Controller {
 
@@ -38,5 +46,22 @@ public class Controller {
     public void prekidClick(ActionEvent actionEvent) {
         if(nit.isAlive()) nit.interrupt();
     }
+
+    public void newWindow(ActionEvent actionEvent){
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("forma.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("My New Stage Title");
+            stage.setScene(new Scene(root, 450, 450));
+            stage.show();
+
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 }

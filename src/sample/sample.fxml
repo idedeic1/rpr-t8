@@ -26,7 +26,7 @@
                 <Label prefHeight="17.0" prefWidth="60.0" text="Uzorak:" />
                 <TextField fx:id="tekst" GridPane.columnIndex="1" />
                 <Button fx:id="trazi" mnemonicParsing="false" onAction="#onClick" text="Trazi" GridPane.columnIndex="2" />
-                <ListView fx:id="lista" prefHeight="275.0" prefWidth="316.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ListView fx:id="lista" onMousePressed="#newWindow" prefHeight="275.0" prefWidth="316.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Button id="Prekini" onAction="#prekidClick" mnemonicParsing="false" text="Prekini" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
